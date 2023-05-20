@@ -1,40 +1,11 @@
 import './App.css'
-import InputCompnent from './components/InputComponent'
+import Componente from './components/Componente'
 
 function App() {
   return (
-    <>
-      <form>
-        <InputCompnent 
-          label="Titulo" 
-          type="text"
-        />
-        <br/>
-        <br/>
-
-        <InputCompnent 
-          label="Descrição" 
-          type="text"/>
-        <br/>
-        <br/>
-
-        <InputCompnent 
-          label="Valor"
-          type= "number"
-          />
-        <br/>
-        <br/>
-
-        <InputCompnent 
-          label="IMG URL"
-          trype="url"  
-        />
-        <br/>
-        <br/>
-
-        <button>Salvar</button>
-      </form>
-    </>
+    <Componente name="João">
+      <h1>Hello</h1>
+    </Componente>
   )
 }
 
