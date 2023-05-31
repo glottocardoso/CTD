@@ -9,7 +9,6 @@ function App() {
 
   const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState("");
-  const [card, setCard] = useState({});
   const [mensagemErro, setMensagemErro] = useState(false)
   const [carroList, setCarroList] = useState([]);
 
@@ -26,7 +25,7 @@ function App() {
 
     event.preventDefault()
 
-    if (title.length >= 3 && imgUrl.length>=6){
+    if (title.trim().length >= 3 && imgUrl.length>=6){
       setCarroList(
         [
             ...carroList, 
