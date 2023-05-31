@@ -24,8 +24,20 @@ function App() {
   const handleButtonClick = (event) => {
 
     event.preventDefault()
-
-    if (title.trim().length >= 3 && imgUrl.length>=6){
+    
+    const hasNumber = (texto) =>{
+      return texto.trim().split("").some((caractere)=>{
+        if (isNaN(parseInt(caractere))){
+          console.log("entrei no falso")
+          return false;
+          
+        }else{
+          console.log("entrei no true")
+        return true;
+      }})
+    };
+    
+    if (title.trim().length >= 3 && imgUrl.length>=6 && hasNumber(imgUrl)){
       setCarroList(
         [
             ...carroList, 
