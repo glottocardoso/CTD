@@ -39,31 +39,11 @@ function App() {
             }
         ]
       )
-      
       setMensagemErro(false)
     }else{
       setMensagemErro(true)
     }
 
-  }
-
-  //Validações
-  const input1Validator = () => {
-      
-      if (title.length >= 3) { 
-          setInput1(true);
-      } else {
-          setInput1(false);
-      }
-  }
-
-  const input2Validator = () => {
-
-    if (imgUrl.length >= 6) {
-        setInput2(true);
-    } else {
-        setInput2(false);
-    }
   }
 
   return (
@@ -93,7 +73,7 @@ function App() {
                         return (
                             <CardComponent
                                 key={carroCard.title}
-                                name={carroCard.title}
+                                title={carroCard.title}
                                 imageUrl={carroCard.imgUrl}
                             />
                         );
