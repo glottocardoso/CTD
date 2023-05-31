@@ -9,9 +9,6 @@ function App() {
 
   const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState("");
-  const [input1, setInput1] = useState(false)
-  const [input2, setInput2] = useState(false)
-
   const [card, setCard] = useState({});
   const [mensagemErro, setMensagemErro] = useState(false)
   const [carroList, setCarroList] = useState([]);
@@ -41,7 +38,6 @@ function App() {
       )
       setMensagemErro(false)
     }else{
-      console.log("Entrei aqui")
       setMensagemErro(true)
     }
 
@@ -87,11 +83,6 @@ function App() {
         <h4 hidden={!mensagemErro} style={{color: "red"}}>Por favor, verifique os dados inseridos no formulário</h4>
 
       </form>
-
-      <CardComponent
-        title={card.title}
-        imgUrl={card.imgUrl}
-      />
 
     </>
   )
