@@ -41,6 +41,7 @@ function App() {
       )
       setMensagemErro(false)
     }else{
+      console.log("Entrei aqui")
       setMensagemErro(true)
     }
 
@@ -83,7 +84,7 @@ function App() {
 
         <button onClick={handleButtonClick}>Enviar</button>
 
-        <h4 hidden={mensagemErro} style={{color: "red"}}>Por favor, verifique os dados inseridos no formulário</h4>
+        <h4 hidden={!mensagemErro} style={{color: "red"}}>Por favor, verifique os dados inseridos no formulário</h4>
 
       </form>
 
