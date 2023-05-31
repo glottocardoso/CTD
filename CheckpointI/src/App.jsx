@@ -31,12 +31,17 @@ function App() {
     input2Validator()
 
     if (input1 && input2){
-      setCard(
-        {
-          title: title,
-          imgUrl: imgUrl
-        }
-      );
+      setCarroList(
+        [
+            ...carroList, 
+            { 
+                title: title,
+                imgUrl: imgUrl
+            }
+        ]
+      )
+      
+
       setMensagemErro(false)
     }else{
       setMensagemErro(true)
@@ -44,33 +49,25 @@ function App() {
 
   }
 
+  //Validações
   const input1Validator = () => {
-    
-    if (title.length >= 3) { 
-        setInput1(true);
-    } else {
-        setInput1(false);
-    }
-}
-
-const input2Validator = () => {
-
-  if (imgUrl.length >= 6) {
-      setInput2(true);
-  } else {
-      setInput2(false);
-  }
-}
-
-setCarroList(
-  [
-      ...carroList, 
-      { 
-          title: title,
-          imgUrl: imgUrl
+      
+      if (title.length >= 3) { 
+          setInput1(true);
+      } else {
+          setInput1(false);
       }
-  ]
-)
+  }
+
+  const input2Validator = () => {
+
+    if (imgUrl.length >= 6) {
+        setInput2(true);
+    } else {
+        setInput2(false);
+    }
+  }
+
 
   return (
     <>
