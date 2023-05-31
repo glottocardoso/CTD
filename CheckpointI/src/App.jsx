@@ -74,7 +74,7 @@ function App() {
                             <CardComponent
                                 key={carroCard.title}
                                 title={carroCard.title}
-                                imageUrl={carroCard.imgUrl}
+                                imgUrl={carroCard.imgUrl}
                             />
                         );
                     })
