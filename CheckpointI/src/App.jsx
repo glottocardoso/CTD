@@ -9,9 +9,10 @@ function App() {
 
   const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState("");
-  const [card, setCard] = useState({});
   const [input1, setInput1] = useState(false)
   const [input2, setInput2] = useState(false)
+
+  const [card, setCard] = useState({});
   const [mensagemErro, setMensagemErro] = useState(false)
   const [carroList, setCarroList] = useState([]);
 
@@ -27,10 +28,8 @@ function App() {
   const handleButtonClick = (event) => {
 
     event.preventDefault()
-    input1Validator()
-    input2Validator()
 
-    if (input1 && input2){
+    if (title.length >= 3 && imgUrl.length>=6){
       setCarroList(
         [
             ...carroList, 
@@ -41,7 +40,6 @@ function App() {
         ]
       )
       
-
       setMensagemErro(false)
     }else{
       setMensagemErro(true)
@@ -67,7 +65,6 @@ function App() {
         setInput2(false);
     }
   }
-
 
   return (
     <>
