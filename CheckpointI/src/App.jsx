@@ -11,6 +11,7 @@ function App() {
   const [imgUrl, setImgUrl] = useState("");
   const [mensagemErro, setMensagemErro] = useState(false)
   const [carroList, setCarroList] = useState([]);
+  const [validForm, setValidForm] = useState(false);
 
 
   const handleChangeTitle = (event) => {
